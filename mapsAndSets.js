@@ -1,4 +1,4 @@
-// Practicing Maps and Sets
+// Practicing Maps and Sets JS day 3
 
 let fruitInventory = new Map ();
 
