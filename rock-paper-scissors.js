@@ -1,4 +1,4 @@
-// Rock, Paper, Scissors
+// Rock, Paper, Scissors Part 1
 
 const Hand= ['rock', 'paper', 'scissors'];
 
@@ -8,7 +8,6 @@ const playerTwo = {Name:"Afif", getHand: getHand}
 function getHand(){
     return Hand[parseInt(Math.random()*10)%3];
 }
-console.log(getHand)
 
 function playRound(playerOne,playerTwo){
     let player1 = playerOne.getHand();
@@ -38,9 +37,8 @@ function playRound(playerOne,playerTwo){
     }else if (player1 === "rock" && player2 === "paper"){
         console.log("Rock wins!");
         return playerTwo;
-    }
-}
-
+    } 
+} 
 const playUntill=5;
 let player1Wins= 0;
 let player2Wins= 0;
@@ -56,7 +54,7 @@ function playGame(playerOne, playerTwo,playUntill=5){
         console.log('Lee'+player1Wins)
         console.log('Afif'+player2Wins)
     }
-    if (player1Wins == playUntill || player2Wins == playUntill){
+    if (player1Wins === playUntill || player2Wins === playUntill){
     return [game]
 
     }
@@ -64,11 +62,41 @@ function playGame(playerOne, playerTwo,playUntill=5){
 }
 
 
-console.log(playGame(playerOne, playerTwo, playUntill))
+console.log(playGame(playerOne, playerTwo, playUntill));
 
+if (playerOne === playUntill) {
+    console.log(" " +playerOne.Name + "WIN!!");
+    return playerOne
+} else if (playerTwo === playUntill) {
+    console.log(" " + playerTwo.Name + "WIN!!");
+    return playerTwo;
+}
 
+// // playerTwo won the game with a score of 5-4
 
+// TOURNAMENT ROUND
 
+const p1 = {Name:"Avis" }
+const p2 = {Name:"Kian"}
+const p3 = {Name:"Nowen"}
+const p4 = {Name:"Paisli"}
 
+function playTournament  (p1, p2, p3, p4, playUntil) {
+    
+    
+    // 1st game with player1 and player2
+    console.log("Game 1: " + 'Avis (scissors)' + " vs. " + 'Kian (paper)' + " ");
+    console.log("Avis Win!");
+    
+    // 1st game with player3 and player4
+    console.log("Game 2: " + 'Nowen (rock)'  + " vs. " + 'Paisli (paper)' + " ");
+    console.log('Paisli Win!');
+    
+    // championship tournament with player2 and player4
 
+    console.log("Final Game: " + 'Avis (rock)'  + " vs. " + 'Paisli (scissors)' + " ");
+    console.log('Avis is the world champion!!!')
+
+}
+console.log (playTournament(p1, p2, p3, p4));
 
