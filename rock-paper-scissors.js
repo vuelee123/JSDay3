@@ -37,7 +37,7 @@ function playRound(playerOne,playerTwo){
     }else if (player1 === "rock" && player2 === "paper"){
         console.log("Rock wins!");
         return playerTwo;
-<<<<<<< HEAD
+
     } 
 } 
 const playUntill=5;
@@ -59,20 +59,14 @@ function playGame(playerOne, playerTwo,playUntill=5){
     return [game]
 
     }
-=======
+
     }
 }
 
-
->>>>>>> 4274a41c45121948ca96d01de58490e214af34fe
     return playGame(playerOne,playerTwo)
 }
 
-
-<<<<<<< HEAD
 console.log(playGame(playerOne, playerTwo, playUntill));
-=======
->>>>>>> 4274a41c45121948ca96d01de58490e214af34fe
 
 if (playerOne === playUntill) {
     console.log(" " +playerOne.Name + "WIN!!");
