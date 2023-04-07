@@ -41,30 +41,11 @@ function playRound(playerOne,playerTwo){
     }
 }
 
-const playUntill=5;
-let player1Wins= 0;
-let player2Wins= 0;
 
-function playGame(playerOne, playerTwo,playUntill=5){
-    let game = playRound(playerOne, playerTwo)
-    if(game === playerOne){
-        player1Wins+=1;
-        console.log('Lee'+player1Wins)
-        console.log('Afif'+player2Wins)
-    }else if (game == playerTwo){
-        player2Wins+=1;
-        console.log('Lee'+player1Wins)
-        console.log('Afif'+player2Wins)
-    }
-    if (player1Wins == playUntill || player2Wins == playUntill){
-    return [game]
-
-    }
     return playGame(playerOne,playerTwo)
 }
 
 
-console.log(playGame(playerOne, playerTwo, playUntill))
 
 
 
